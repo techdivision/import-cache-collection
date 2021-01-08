@@ -20,8 +20,8 @@
 
 namespace TechDivision\Import\Cache\Collection;
 
-use TechDivision\Import\Cache\Utils\CacheTypes;
 use TechDivision\Import\Cache\CacheAdapterInterface;
+use TechDivision\Import\Cache\Collection\Utils\CacheTypes;
 use TechDivision\Import\Cache\Configuration\ConfigurationInterface;
 
 /**

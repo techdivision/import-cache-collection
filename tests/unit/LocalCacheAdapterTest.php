@@ -22,7 +22,7 @@ namespace TechDivision\Import\Cache\Collection;
 
 use Ramsey\Uuid\Uuid;
 use PHPUnit\Framework\TestCase;
-use TechDivision\Import\Cache\Utils\CacheKeyUtil;
+use TechDivision\Import\Cache\Collection\Utils\CacheKeyUtil;
 use TechDivision\Import\Cache\Configuration\ConfigurationInterface;
 
 /**
@@ -40,7 +40,7 @@ class LocalCacheAdapterTest extends TestCase
     /**
      * The exportable trait that has to be tested.
      *
-     * @var \TechDivision\Import\Cache\LocalCacheAdapter
+     * @var \TechDivision\Import\Cache\Collection\LocalCacheAdapter
      */
     protected $localCacheAdapter;
 
