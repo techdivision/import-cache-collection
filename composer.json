@@ -1,0 +1,38 @@
+{
+    "name": "techdivision/import-cache-collection",
+    "description": "Pacemaker library providing basic Magento 2 import cache functionality based on a simple collection",
+    "license": "OSL-3.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.1.0",
+        "ramsey/uuid": "~3.7.3|3.8.*",
+        "techdivision/import-cache": "dev-master"
+    },
+    "require-dev": {
+        "ramsey/uuid": "~3.7.3|3.8.*",
+        "doctrine/dbal": "2.5.*",
+        "pdepend/pdepend": "2.5.2",
+        "phpmd/phpmd": "@stable",
+        "phpunit/phpunit": "~6.5.0",
+        "sebastian/phpcpd": "~3.0|~4.0|~5.0|~6.0",
+        "squizlabs/php_codesniffer": "~3.4.0",
+        "consolidation/robo": "~1.0",
+        "mikey179/vfsstream": "~1.0",
+        "symfony/http-kernel": "~3.4"
+    },
+    "authors": [
+        {
+            "name": "Tim Wagner",
+            "email": "t.wagner@techdivision.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TechDivision\\Import\\Cache\\Collection\\": [
+                "src/",
+                "tests/unit"
+            ]
+        }
+    }
+}
