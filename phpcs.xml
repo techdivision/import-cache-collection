@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="techdivision/import-cache">
+<ruleset name="techdivision/import-cache-collection">
 
     <!--
         The TechDivision GmbH coding standard is using a mix of PSR-2

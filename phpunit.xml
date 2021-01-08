@@ -1,6 +1,6 @@
 <phpunit>
     <testsuites>
-        <testsuite name="techdivision/import-cache PHPUnit testsuite">
+        <testsuite name="techdivision/import-cache-collection PHPUnit testsuite">
             <directory suffix="Test.php">tests/unit</directory>
         </testsuite>
     </testsuites>
