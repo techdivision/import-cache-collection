@@ -6,11 +6,10 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.1.0",
-        "ramsey/uuid": "~3.7.3|3.8.*",
+        "ramsey/uuid": "~3.7.3|3.8.*|~4.1.0",
         "techdivision/import-cache": "dev-master"
     },
     "require-dev": {
-        "ramsey/uuid": "~3.7.3|3.8.*",
         "doctrine/dbal": "2.5.*",
         "pdepend/pdepend": "2.5.2",
         "phpmd/phpmd": "@stable",
