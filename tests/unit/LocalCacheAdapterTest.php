@@ -45,7 +45,7 @@ class LocalCacheAdapterTest extends TestCase
      * @return void
      * @see \PHPUnit\Framework\TestCase::setUp()
      */
-    protected function setUp()
+    protected function setUp(): void
     {
 
         // create the mock configuration
