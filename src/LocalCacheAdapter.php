@@ -38,7 +38,7 @@ class LocalCacheAdapter implements CacheAdapterInterface
     /**
      * Trait that provides custom cache adapter functionality.
      *
-     * @var TechDivision\Import\Cache\CacheAdapterTrait
+     * @var \TechDivision\Import\Cache\Collection\CacheAdapterTrait
      */
     use CacheAdapterTrait;
 
