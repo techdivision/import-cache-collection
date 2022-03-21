@@ -6,4 +6,4 @@
 
 ## Features
 
-* Initial Release
+* PAC-541: Update composer with php Version ">=^7.3"
