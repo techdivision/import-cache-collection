@@ -6,7 +6,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.1",
-        "ramsey/uuid": "^4.7.6",
+        "ramsey/uuid": "^4.3.0",
         "techdivision/import-cache": "dev-compatibility-php-81"
     },
     "require-dev": {
