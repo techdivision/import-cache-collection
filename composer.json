@@ -7,7 +7,7 @@
     "require": {
         "php": "^8.3",
         "ramsey/uuid": "^4.2|^4.7",
-        "techdivision/import-cache": "^2.0.0"
+        "techdivision/import-cache": "^2.1"
     },
     "require-dev": {
         "doctrine/dbal": "^4.0.4",
