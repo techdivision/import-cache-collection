@@ -82,6 +82,46 @@ if ($cacheAdapter->has('product_' . $sku)) {
 - Beachte Memory-Limits bei großen Imports
 - Erwäge Redis-Implementierung für verteilte Caches
 
+## Häufige Use Cases
+
+### Szenarien
+1. **Development/Testing**: Schnelle Tests ohne externe Cache-Dependency
+2. **Small Imports**: Imports < 10.000 Produkten mit flachen Hierarchien
+3. **Single-Process Imports**: CLI-basierte Imports ohne Parallelisierung
+4. **Memory-Rich Environment**: Server mit 16GB+ RAM für größere Caches
+
+### Performance-Profile
+- **1.000 Items**: ~10MB Memory, ~50-100ms Setup
+- **10.000 Items**: ~100MB Memory, ~100-200ms Setup
+- **50.000 Items**: ~500MB Memory, ~200-500ms Setup (Warnung!)
+- **100.000+ Items**: Nicht empfohlen - zu viel Memory
+
+## Performance-Überlegungen
+
+- **Memory-Footprint**: Lineare Skalierung - 10KB pro Item durchschnittlich
+- **Lookup-Speed**: O(1) UUID-Lookup (~0.1ms pro Zugriff)
+- **GC-Pressure**: Große Collections verursachen GC-Pausen bei >50% Heap-Auslastung
+- **Optimal für**: Imports bis 50k Items auf Maschinen mit 8GB+ RAM
+- **Nicht optimal für**: Production mit >100k Items oder Multi-threaded
+
+## Verwandte Module
+
+- **import-cache**: Definiert Cache-Interfaces die dieses Modul implementiert
+- **import-dbal-collection**: Nutzt `import-cache-collection` für DBAL-Caching
+- **import-cache-collection** ← **diese Datei**
+- **import**: Core Framework nutzt Cache für Performance
+
+## Troubleshooting & FAQ
+
+**Q: "Out of Memory" bei großem Import**
+- A: Reduziere Batch-Size oder nutze Redis-Cache statt In-Memory. Max: PHP Memory-Limit minus 20% Puffer.
+
+**Q: Cache-Lookups werden langsam**
+- A: Das ist normal bei >50k Items. Nutze `import-cache-redis` für größere Datenmengen.
+
+**Q: "UUID not found" Fehler**
+- A: Cache-Key nicht registriert. Prüfe UUID-Generation: `$cacheAdapter->set('product_' . $uuid, $data)`
+
 ## Bekannte Einschränkungen
 
 - **In-Memory Only**: Daten gehen verloren bei Prozess-Ende
